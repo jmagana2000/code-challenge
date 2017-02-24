@@ -1,0 +1,12 @@
+[
+{"type": "CUSTOMER", "verb": "NEW", "key": "76f55c7d8w42", "event_time": "2017-01-06:12:46:46.384Z", "last_name": "Jones", "adr_city": "Sunnyvale", "adr_state": "CA"},
+{"type": "CUSTOMER", "verb": "NEW", "key": "86f55c7d8e42", "event_time": "2017-01-06:12:46:46.384Z", "last_name": "Clark", "adr_city": "Seattle", "adr_state": "WA"},
+{"type": "CUSTOMER", "verb": "NEW", "key": "86f55c7d8f02", "event_time": "2017-01-06:12:46:46.384Z", "last_name": "Abby", "adr_city": "Orlando", "adr_state": "FL"},
+{"type": "CUSTOMER", "verb": "NEW", "key": "86f55c7d8f32", "event_time": "2017-01-06:12:46:46.384Z", "last_name": "Park", "adr_city": "Jackson", "adr_state": "TN"},
+{"type": "CUSTOMER", "verb": "NEW", "key": "66f55c7d8f22", "event_time": "2017-01-06:12:46:46.384Z", "last_name": "Long", "adr_city": "Boston", "adr_state": "MA"},
+{"type": "CUSTOMER", "verb": "NEW", "key": "46f55c7d8f12", "event_time": "2017-01-06:12:46:46.384Z", "last_name": "Duck", "adr_city": "Santa Monica", "adr_state": "CA"},
+{"type": "CUSTOMER", "verb": "NEW", "key": "96f55c7d8f42", "event_time": "2017-01-06:12:46:46.384Z", "last_name": "Smith", "adr_city": "Middletown", "adr_state": "AK"},
+{"type": "SITE_VISIT", "verb": "NEW", "key": "ac05e815502f", "event_time": "2017-01-06:12:45:52.041Z", "customer_id": "96f55c7d8f42", "tags": {"some key": "some value"}},
+{"type": "IMAGE", "verb": "UPLOAD", "key": "d8ede43b1d9f", "event_time": "2017-01-06:12:47:12.344Z", "customer_id": "96f55c7d8f42", "camera_make": "Canon", "camera_model": "EOS 80D"},
+{"type": "ORDER", "verb": "NEW", "key": "68d84e5d1a43", "event_time": "2017-01-06:12:55:55.555Z", "customer_id": "96f55c7d8f42", "total_amount": "12.34 USD"}
+]
