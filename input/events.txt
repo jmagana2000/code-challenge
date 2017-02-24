@@ -7,6 +7,20 @@
 {"type": "CUSTOMER", "verb": "NEW", "key": "46f55c7d8f12", "event_time": "2017-01-06:12:46:46.384Z", "last_name": "Duck", "adr_city": "Santa Monica", "adr_state": "CA"},
 {"type": "CUSTOMER", "verb": "NEW", "key": "96f55c7d8f42", "event_time": "2017-01-06:12:46:46.384Z", "last_name": "Smith", "adr_city": "Middletown", "adr_state": "AK"},
 {"type": "SITE_VISIT", "verb": "NEW", "key": "ac05e815502f", "event_time": "2017-01-06:12:45:52.041Z", "customer_id": "96f55c7d8f42", "tags": {"some key": "some value"}},
+{"type": "SITE_VISIT", "verb": "NEW", "key": "bc05e815502f", "event_time": "2017-01-07:16:45:52.041Z", "customer_id": "96f55c7d8f42", "tags": {"some key": "some value"}},
+{"type": "SITE_VISIT", "verb": "NEW", "key": "cc05e815502f", "event_time": "2017-01-08:12:45:52.041Z", "customer_id": "86f55c7d8f32", "tags": {"some key": "some value"}},
+{"type": "SITE_VISIT", "verb": "NEW", "key": "dc05e815502f", "event_time": "2017-01-01:12:45:52.041Z", "customer_id": "86f55c7d8e42", "tags": {"some key": "some value"}},
+{"type": "SITE_VISIT", "verb": "NEW", "key": "ec05e815502f", "event_time": "2017-01-16:12:45:52.041Z", "customer_id": "66f55c7d8f22", "tags": {"some key": "some value"}},
+{"type": "SITE_VISIT", "verb": "NEW", "key": "fc05e815502f", "event_time": "2017-01-10:12:45:52.041Z", "customer_id": "46f55c7d8f12", "tags": {"some key": "some value"}},
+{"type": "SITE_VISIT", "verb": "NEW", "key": "gc05e815502f", "event_time": "2017-01-08:12:45:52.041Z", "customer_id": "76f55c7d8w42", "tags": {"some key": "some value"}},
+{"type": "SITE_VISIT", "verb": "NEW", "key": "hc05e815502f", "event_time": "2017-01-11:12:45:52.041Z", "customer_id": "86f55c7d8f02", "tags": {"some key": "some value"}},
 {"type": "IMAGE", "verb": "UPLOAD", "key": "d8ede43b1d9f", "event_time": "2017-01-06:12:47:12.344Z", "customer_id": "96f55c7d8f42", "camera_make": "Canon", "camera_model": "EOS 80D"},
 {"type": "ORDER", "verb": "NEW", "key": "68d84e5d1a43", "event_time": "2017-01-06:12:55:55.555Z", "customer_id": "96f55c7d8f42", "total_amount": "12.34 USD"}
+{"type": "ORDER", "verb": "NEW", "key": "68a84e1d1a48", "event_time": "2017-01-07:12:55:55.555Z", "customer_id": "96f55c7d8f42", "total_amount": "6.12 USD"}
+{"type": "ORDER", "verb": "NEW", "key": "68b84e2d1a47", "event_time": "2017-01-08:12:55:55.555Z", "customer_id": "86f55c7d8f32", "total_amount": "9.50 USD"}
+{"type": "ORDER", "verb": "NEW", "key": "68c84e3d1a46", "event_time": "2017-01-02:12:55:55.555Z", "customer_id": "86f55c7d8e42", "total_amount": "15.00 USD"}
+{"type": "ORDER", "verb": "NEW", "key": "68e84e4d1a45", "event_time": "2017-01-22:12:55:55.555Z", "customer_id": "66f55c7d8f22", "total_amount": "23.44 USD"}
+{"type": "ORDER", "verb": "NEW", "key": "68f84e0d1a44", "event_time": "2017-01-24:12:55:55.555Z", "customer_id": "66f55c7d8f22", "total_amount": "11.99 USD"}
+{"type": "ORDER", "verb": "NEW", "key": "68g84e6d1a42", "event_time": "2017-01-16:12:55:55.555Z", "customer_id": "46f55c7d8f12", "total_amount": "14.67 USD"}
+{"type": "ORDER", "verb": "NEW", "key": "68h84e7d1a41", "event_time": "2017-01-09:12:55:55.555Z", "customer_id": "76f55c7d8w42", "total_amount": "45.33 USD"}
 ]
