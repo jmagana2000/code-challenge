@@ -14,7 +14,9 @@ You may use one of the following OO languages: Java, Python, Scala.
 Given event e, update data D
 
 ### TopXSimpleLTVCustomers(x, D)
-Return the top x customers with the highest Simple Lifetime Value from data D.
+Return the top x customers with the highest Simple Lifetime Value from data D. 
+
+Please note that the timeframe for this calculation should come from D. That is, use the data that was ingested into D to calculate the LTV to frame the start and end dates of your LTV calculation. You should not be using external data (in particular "now") for this calculation.
 
 ## Events
 
@@ -113,7 +115,11 @@ Once you have completed your code, submit a link to a Github repo that contains 
 
 * *May I use pre-built libraries?*
 
-  You may, but you should not need to use anything exotic. If you choose to do so, please document your dependencies and design decisions.
+  You may, but you should not need to use anything exotic. Fairly standard libraries such as parsing functionality is fine. If you do use libraries that need to be separately downloaded or referenced to use the program, please document.
+
+* *May I use Big Data technology XYZ?*
+
+  Probably not. The purpose of this coding challenge is to ensure you have a solid foundation in coding skills. Additionally, your code must be easy to be reviewed and tested, so you should not expect the reviewer to have your specific technology installed and available. In the end, you must be sure that your resulting output is sufficient to showcase your code.
 
 * *How long may I work on this?*
 
@@ -127,7 +133,7 @@ Once you have completed your code, submit a link to a Github repo that contains 
 
   You should consider your data set (whatever data set you use to test) as complete for that timeframe. So if user A has order events in week 1 and order events in the following week 2, but user B has only order events in week 1, then user B will have see a lower average revenue as his revenue is averaged with zero revenue in week 2.
 
-* *What constitutes a week?* 
+* *What constitutes a week?*
 
   You can calculate whatever you want for a week, but it is probably easier to consider a week as running from Sunday - Saturday, as the US default calendar does.
 
