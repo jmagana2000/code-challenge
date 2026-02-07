@@ -12,18 +12,15 @@ def ingest(e, D):
             data.event_time[x], '%Y-%m-%d:%H:%M:%S.%fZ').isocalendar()[0]
         week = datetime.datetime.strptime(
             data.event_time[x], '%Y-%m-%d:%H:%M:%S.%fZ').isocalendar()[1]
-        data.set_value(x, 'yearweek', '{0}_{1}'.format(year, week))
+        data.at[x, 'yearweek'] = f'{year}_{week}'
 
     # Parse the JSON string by type
-    customers = data[data['type'] == 'CUSTOMER']
-    print "Customer Count ", len(customers)
-    visits = data[data['type'] == 'SITE_VISIT']
-    images = data[data['type'] == 'IMAGE']
-    orders = data[data['type'] == 'ORDER']
-
-    # Strip 'USD' From total amount to sum amounts
-    for k, v in orders['total_amount'].iteritems():
-        orders.set_value(k, 'total_amount', float(str(v).split(' ')[0]))
+    customers = data[data['type'] == 'CUSTOMER'].copy()
+    print ("Customer Count ", len(customers))
+    visits = data[data['type'] == 'SITE_VISIT'].copy()
+    images = data[data['type'] == 'IMAGE'].copy()
+    orders = data[data['type'] == 'ORDER'].copy()
+    orders['total_amount'] = orders['total_amount'].str.replace(' USD', '').astype(float)
 
     # Expenditures by customer into DataFrame
     epw = pd.DataFrame(orders.groupby(['customer_id'])[['total_amount']].sum())
@@ -34,7 +31,7 @@ def ingest(e, D):
     for r in epw.iterrows():
         if D[D.customer_id != r[0]].any:
             if r[0] in vpw.index.values and r[0] in epw.index.values:
-                D.loc[len(D)] = [r[0], vpw.loc[r[0]][0]*epw.loc[r[0]][0]*52*10]
+                D.loc[len(D)] = [r[0], vpw.loc[r[0]].iloc[0] * epw.loc[r[0]].iloc[0] * 52 * 10]
 
     return D
 
@@ -48,4 +45,4 @@ def TopXSimpleLTVCustomers(x, D):
 DATA = pd.DataFrame(columns=['customer_id', 'LTV'])
 DATA = ingest('https://raw.githubusercontent.com/jmagana2000/code-challenge/master/input/events.txt', DATA)
 top = TopXSimpleLTVCustomers(10, DATA)
-print top
+print(top)
